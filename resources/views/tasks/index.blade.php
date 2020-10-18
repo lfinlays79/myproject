@@ -3,9 +3,10 @@
 @section('content')
 
 <p><a href="{{ route('tasks.create')}}"> Add a Task </a></p>
-
-
-
+<form action="{{ route('tasks.add') }}" method="GET">
+@csrf
+<input type="submit" name="addme" value="Add Dummy Tasks" />
+</form>
 <table>
 <tr>
 <th>ID</th>

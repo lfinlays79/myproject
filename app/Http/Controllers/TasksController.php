@@ -89,4 +89,17 @@ class TasksController extends Controller
         Tasks::find($id)->delete();
         return redirect()->route('tasks.index');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function add()
+    {
+        Tasks::factory()->count(5)->create();
+        return redirect()->route('tasks.index');
+    }
+
 }
